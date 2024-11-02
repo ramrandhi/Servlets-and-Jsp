@@ -1,0 +1,26 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@page import="java.sql.*" %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<%! 
+		String url = "jdbc:mysql://localhost:3306/common";
+		String name = "hcn";
+		String password = "admin@123";
+		String sql = "select * from common.user_info;";
+	%>
+
+	<%
+	Class.forName("com.mysql.jdbc.driver");
+	Connection con = DriverManager.getConnection(url,name,password);
+	Statement st = con.createStatement(resultSetType, resultSetConcurrency)
+	%>
+
+</body>
+</html>

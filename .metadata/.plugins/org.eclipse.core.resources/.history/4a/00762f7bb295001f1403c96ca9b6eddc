@@ -1,0 +1,11 @@
+package com.servlerts;
+
+import javax.servlet.http.HttpServlet;
+
+public class AddServlet extends HttpServlet {
+	
+	public void service(HttpServetRequest req, HttpServletResponse res) {
+		
+	}
+
+}
